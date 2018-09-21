@@ -162,7 +162,12 @@ LifeGameApp.View.prototype = {
   addClickListenerToCell: function (x, y, onclick) {
     var td = this.tbl.childNodes[y].childNodes[x];
     if (td.addEventListener) {
-      td.addEventListener("click", function () { onclick(x, y); }, false);
+      td.addEventListener("click", function () { onclick(x, y) });
+      td.addEventListener("mouseleave", function () {
+        if (event.ctrlKey) {
+          onclick(x, y);
+        }
+      }, false);
     }
     else if (td.attachEvent) {
       td.attachEvent("onclick", function () { onclick(x, y); });

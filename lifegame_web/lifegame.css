@@ -4,8 +4,8 @@ table.lifegame-table {
 }
 table.lifegame-table > tr > td {
     border: 1px solid #808080;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     padding: 0;
     margin: 0;
 }
