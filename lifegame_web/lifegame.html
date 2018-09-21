@@ -1,0 +1,24 @@
+<html lang="ja">
+<head>
+  <link rel="stylesheet" type="text/css" href="lifegame.css">
+  <script type="text/javascript" src="lifegame.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+
+    game = LifeGameApp.appendLifeGameWithRecreatorAfterLastScriptNode(30, 30);
+    //game = LifeGameApp.appendLifeGameAfterLastScriptNode(30, 30); //再作成ボタン無しの場合
+
+    // 初期配置(必要なら)
+    game.model.put(10, 10,
+      ["** ",
+        " **",
+        " * "
+      ]);
+    // 開始(最初からスタートさせるなら)
+    game.control.start();
+
+  </script>
+  ...
+</body>
+</html>
